@@ -1,0 +1,16 @@
+Items: {
+	grabbag1: {
+		DisplayName: Friend Bag (Nathan)
+		Tooltip: let me out!
+	}
+
+	grabbag2: {
+		DisplayName: Friend Bag (Logan)
+		Tooltip: Can you get me out of here?
+	}
+
+	grabbag3: {
+		DisplayName: Friend Bag (Hero)
+		Tooltip: Can you open the bag please?
+	}
+}

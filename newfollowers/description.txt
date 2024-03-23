@@ -1,0 +1,17 @@
+Welcome to the my little (and maybe the first?) pack of followers for TerraGuardians
+
+There are 3 of them currently Nathan, Logan, and Hero
+
+Get them on your side by using the bags you'll be given with a new character or just use cheat sheet
+
+Leave a comment if there's another character you might want to see later. Give me a general rundown of the character and I might try and add them.
+
+Do you just want these guys and no Guardians? First off You Monster! Secondly you can have just these guys with no guardians by disabling "Enable Mod Companions to spawn" in the TerraGuardians config.
+
+Want to make your own follower? check out the base here: https://github.com/nakano15/gaomonmod1dot4
+
+Have some questions about them or TerraGuardians as a whole? join the discord!: https://discord.gg/Bz6vwUa7X3
+
+Credit: Nakano15: For the base and just generally being cool. Thanks Nakano!
+
+The Binding of Isaac: Bag sprite

@@ -1,0 +1,4 @@
+displayName = The Adventure Squad!
+author = That Annoying Guide
+version = 0.1
+modReferences = terraguardians
