@@ -26,7 +26,7 @@ namespace newfollowers.Items
                 Item.SetDefaults(0);
                 return true;
             }
-            Main.NewText("You've already let them out of this bag");
+            Main.NewText("You've already let Logan out of this bag");
             return false;
         }
 

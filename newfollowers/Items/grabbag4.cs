@@ -4,15 +4,15 @@ using terraguardians;
 
 namespace newfollowers.Items
 {
-    public class grabbag3 : ModItem
+    public class grabbag4 : ModItem
     {
         private bool UseItem(Player player)
         {
-            return player.whoAmI == Main.myPlayer && !PlayerMod.PlayerHasCompanion(player, 2, this.Mod.Name)  //Player doesn't have Gaomon in their companion list
+            return player.whoAmI == Main.myPlayer && !PlayerMod.PlayerHasCompanion(player, 3, this.Mod.Name)  //Player doesn't have Gaomon in their companion list
             && 
-            !terraguardians.WorldMod.HasCompanionNPCSpawned(2, this.Mod.Name) //Gaomon is not a companion npc in the world.
+            !terraguardians.WorldMod.HasCompanionNPCSpawned(3, this.Mod.Name) //Gaomon is not a companion npc in the world.
              && 
-            !terraguardians.WorldMod.HasMetCompanion(2, this.Mod.Name); //Gaomon has never been met in this world.
+            !terraguardians.WorldMod.HasMetCompanion(3, this.Mod.Name); //Gaomon has never been met in this world.
         }
 
         public override bool CanUseItem(Player player)
@@ -21,12 +21,12 @@ namespace newfollowers.Items
             {
                 //This script makes so the item spawns Gaomon on the player position.
                 Companion tg = 
-				terraguardians.WorldMod.SpawnCompanionNPC(player.Bottom, NewContainer.Hero, Mod.Name);
+				terraguardians.WorldMod.SpawnCompanionNPC(player.Bottom, NewContainer.Shiro, Mod.Name);
                 Main.NewText("After opening the bag someone fell out");
                 Item.SetDefaults(0);
                 return true;
             }
-            Main.NewText("You've already let Hero out of this bag");
+            Main.NewText("You've already let Shiro out of this bag");
             return false;
         }
 

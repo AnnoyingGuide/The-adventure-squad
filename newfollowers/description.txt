@@ -1,12 +1,22 @@
 Welcome to the my little (and maybe the first?) pack of followers for TerraGuardians
 
-There are 3 of them currently Nathan, Logan, and Hero
+There are 5 of them currently Nathan, Logan, Hero, Shiro, and Nago
 
 Get them on your side by using the bags you'll be given with a new character or just use cheat sheet
 
-Leave a comment if there's another character you might want to see later. Give me a general rundown of the character and I might try and add them.
+Starter items for each are as followed
 
-Do you just want these guys and no Guardians? First off You Monster! Secondly you can have just these guys with no guardians by disabling "Enable Mod Companions to spawn" in the TerraGuardians config.
+Nathan starts with a Wooden Sword and Finch Staff
+
+Logan starts with a Tin Broadsword
+
+Hero starts with a Wand of Sparking
+
+Shiro starts with a Wooden Bow and some Arrows
+
+Nago starts with a Copper ShortSword
+
+Do you just want these guys and no Guardians? You can have just these guys with no guardians by disabling "Enable Mod Companions to spawn" in the TerraGuardians config.
 
 Want to make your own follower? check out the base here: https://github.com/nakano15/gaomonmod1dot4
 
@@ -15,3 +25,11 @@ Have some questions about them or TerraGuardians as a whole? join the discord!: 
 Credit: Nakano15: For the base and just generally being cool. Thanks Nakano!
 
 The Binding of Isaac: Bag sprite
+
+Version 0.2 includes a few small fixes for things I missed in the first version
+
+Version 0.3 is a small patch to some dialog triggers.
+
+Version 0.4 is a small patch to their combat trigger rates.
+
+Version 1.0 Happy new year! This is a pretty big patch bring two new followers as the current cap is 5 in the team at once. Also some fixes and new dialog for the others. Unique starting items too.

@@ -2,103 +2,97 @@ using Terraria;
 using terraguardians;
 using System.Collections.Generic;
 
-namespace newfollowers.Companions.Logan
+namespace newfollowers.Companions.Shiro
 {
     //Contains the dialogues of the companion. Must extend CompanionDialogueContainer.
-    public class LoganDialogues : CompanionDialogueContainer //Must be assigned on the companion base file, setting it as the value of "GetDialogueContainer" overrideable method.
+    public class ShiroDialogues : CompanionDialogueContainer //Must be assigned on the companion base file, setting it as the value of "GetDialogueContainer" overrideable method.
     {
         public override string GreetMessages(Companion companion) //Messages for when you just met the companion.
         {
-            return "Thanks! I thought I was going to die in that bag.";
+            return "Oh uh hello there, I'm Shiro. Thanks for letting me out of that bag I guess.";
         }
 
         public override string NormalMessages(Companion companion) //Normal chitchat. If you want to get player reference, use MainMod.GetLocalPlayer.
         {
             List<string> Mes = new List<string>();
-            Mes.Add("So how you been?");
-            Mes.Add("My friends are dimension hoppers. Me I like to take things easy.");
-            Mes.Add("Ya know what Chikipi is? I hear they're a special form of a chicken that can fight!");
-			Mes.Add("I'm more of fist fighter, but I guess they don't that in this world.");
-            Mes.Add("Ya know where to get a bite to eat around here?");
-            Mes.Add("Ever wondered why we don't need bathrooms here?");
-			Mes.Add("Do you actually like mining for stuff? I'd help dig, but I think I'm missing the brains to dig.");
+            Mes.Add("So uh you're going to protect me out there right?");
+            Mes.Add("Is Nago around? I get antsy without him...");
+            Mes.Add("Oh yeah I ended up joining the adventure squad as Nago wanted too. I'm not really much of a fighter though...");
+            Mes.Add("Say do you have any idea why Nago and I turned into Terrarians? It's not too bad I suppose.");
+            Mes.Add("I used to live on a star called dream land. The locals are just as bloodthristy as they are here.");
+			Mes.Add("So do I have fur or not? I can't really decide");
+			Mes.Add("Say do you know who Pick is by chance? She's a good friend of mine a Hamster too.");
+			Mes.Add("MEOW! oh sorry sometimes I get excited and just have to let it go :3");
+			Mes.Add("Mrrp Mrrp Meow :3");
             if (!Main.dayTime)
             {
                 if (Main.bloodMoon)
                 {
-                    Mes.Add("So many things to kill tonight. Let's tally and see whose better.");
+                    Mes.Add("HISS!");
+                    Mes.Add("What the hell do you want on a night like this!?");
+                    Mes.Add("Where's Nago at? I think it's high time he get's what he deserves.");
+					Mes.Add("The moon has got my blood boiling, please show me some creatures I can kill.");
                 }
                 else
                 {
-					Mes.Add("Wonder if those stars form constellations");
-					Mes.Add("I've always wondered what's out there. In space I mean.");
+                    Mes.Add("Such a romantic night. Say where's Nago?");
+					Mes.Add("Nathan told me something about a fuller moon means easier fishing. Now I'm hungry.");
+					Mes.Add("Sometimes on nights like these Hero tells me about the lose of someone he was very close with.");
                 }
             }
             else
             {
                 if (Main.eclipse)
                 {
-                    Mes.Add("The sun sure looks wicked right now.");
-                    Mes.Add("I call dibs on mothron loot.");
+                    Mes.Add("By chance do you have a litter box I could borrow. These monsters are gonna make me wet myself.");
+                    Mes.Add("Howabout you guys handle this. I'm off to the little kittens room.");
                 }
                 else
                 {
-                    Mes.Add("Today is nice day for some adventure");
+                    Mes.Add("Being all white has it's perks. The sun ain't so harsh on my fur.");
+                    Mes.Add("I'm not really a day person I prefer to stay inside and sleep");
                 }
             }
             if (Main.raining && !Main.eclipse && !Main.bloodMoon)
             {
-                Mes.Add("Rain reminds me when I looked up at sky just before it started raining and got drenched right as I looked up!");
-            }
-            if (Main.hardMode)
-            {
-                Mes.Add("We should kill that flesh wall thing some more. I like it's loot.");
+                Mes.Add("I could not even begin to describe how much I hate water to you");
             }
             if (NPC.AnyNPCs(Terraria.ID.NPCID.Merchant))
             {
-                Mes.Add("[nn:" + Terraria.ID.NPCID.Merchant + "] potions aren't very strong, but they do get the job done.");
+                Mes.Add("[nn:" + Terraria.ID.NPCID.Merchant + "] sells some basic supplies. Say could you buy me some marshmellows? He only sells them in the tundra ya know.");
             }
-			if (WorldMod.GetTerraGuardiansCount > 0)
+
+            if (WorldMod.GetTerraGuardiansCount > 0)
             {
-                Mes.Add("You sure those animal creatures aren't plotting to kill us?");
-                Mes.Add("So you say those creatures aren't furries? I don't know about that.");
-            }
-            if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Rococo)) //Checks if there's a npc of this companion ID spawned in the world. Add ModName as an argument after the ID to get another mod companion instead.
-            {
-                //[gn:id:modid] gets the name of the companion whose ID and ModID are supplied. Leaving without mod id will make the mod automatically get a TerraGuardian mod companion.
-                Mes.Add("[gn:" + 0 + "] is cool, he helps keep my room clean by eating all the garbage.");
+                Mes.Add("The Guardians kinda remind me of myself. Well when I was cat still.");
             }
             if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Blue))
             {
-                Mes.Add("Someday, I just know [gn:" + terraguardians.CompanionDB.Blue + "] is going to try and get me in my sleep.");
+                Mes.Add("Did you know my name stands for white in Japanese? Blue's name in Japanese would be Ao which kinda sounds painful.");
             }
             if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Sardine) || WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Bree))
             {
-                Mes.Add("Cats make for the best companions. Glad we found some.");
-            }
-            if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Zacks))
-            {
-                Mes.Add("I feel like I'm about to become zombie chow...");
-            }
-			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Michelle))
-            {
-                Mes.Add("Would you please tell [gn:" + terraguardians.CompanionDB.Michelle + "] to leave me alone. I can't even think straight when she's around.");
+                Mes.Add("Oh how nice it is to with another cat. They're even small like us too!");
             }
 			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Alex))
             {
-                Mes.Add("My sister has a dog that's kinda like [gn:" + terraguardians.CompanionDB.Alex + "] but much smaller.");
+                Mes.Add("A dog? Really...");
             }
 			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Domino))
             {
-                Mes.Add("Good thing I got a surplus of bones from my last trip underground [gn:" + terraguardians.CompanionDB.Domino + "] just loves them.");
+                Mes.Add("I'm having a hard time trusting Domino. and not just because he's a dog. I think Brutus was right about him.");
             }
 			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Leopold))
             {
-                Mes.Add("[gn:" + terraguardians.CompanionDB.Leopold + "] books make my head hurt. Think he cursed them first when I asked to borrow them?");
+                Mes.Add("Personally I found it hilarious when Leopold ran away like he did.");
             }
 			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Luna))
             {
-                Mes.Add("[gn:" + terraguardians.CompanionDB.Luna + "] is nice and all, but I still can't wrap my head around her.. words!");
+                Mes.Add("Luna is just so knowledgeable, sometimes I feel like she knows more about me then I know.");
+            }
+			if (WorldMod.HasCompanionNPCSpawned(terraguardians.CompanionDB.Mabel))
+            {
+                Mes.Add("If you see Nago tell him to stop thirsting over that moose!");
             }
             return Mes[Terraria.Main.rand.Next(Mes.Count)];
         }
@@ -106,7 +100,7 @@ namespace newfollowers.Companions.Logan
         public override string TalkMessages(Companion companion) //This message only appears if you speak with a companion whose friendship exp increases.
         {
             List<string> Mes = new List<string>();
-            Mes.Add("Thanks again for all the help.");
+            Mes.Add("Ya know I feel like we're becoming fast friends. Thanks for everything :3");
             return Mes[Terraria.Main.rand.Next(Mes.Count)];
         }
 
@@ -117,36 +111,35 @@ namespace newfollowers.Companions.Logan
                 case RequestContext.NoRequest:
                     {
                         List<string> Mes = new List<string>();
-                        Mes.Add("I'm alright, but thanks for asking.");
+                        Mes.Add("Uh nope no requests here, but thanks for asking.");
                         return Mes[Terraria.Main.rand.Next(Mes.Count)];
                     }
                 case RequestContext.HasRequest:
                     {
                         List<string> Mes = new List<string>();
-                        Mes.Add("Ya, I would like it if you could [objective].");
+                        Mes.Add("Oh actually I do, can you [objective] for me?");
                         return Mes[Main.rand.Next(Mes.Count)];
                     }
                 case RequestContext.Completed:
                     {
                         List<string> Mes = new List<string>();
-                        Mes.Add("Thanks, here, take this junk");
-						Mes.Add("You the best, dude.");
+                        Mes.Add("Thank you, I hope these item's suffice");
                         return Mes[Terraria.Main.rand.Next(Mes.Count)];
                     }
                 case RequestContext.Accepted:
-                    return "I'll be waiting.";
+                    return "Thank you, just let me know when you finish it.";
                 case RequestContext.TooManyRequests:
-                    return "Don't overload yourself, it can wait.";
+                    return "You seem a bit overloaded on jobs right now. Let me know when you have space.";
                 case RequestContext.Rejected:
-                    return "Alright, no biggy.";
+                    return "Oh, well I bet Nago could take care of it.";
                 case RequestContext.PostponeRequest:
-                    return "It can wait I don't mind.";
+                    return "Uhm yeah sure, just try not to forget.";
                 case RequestContext.Failed:
-                    return "Well hopefully you at least tried";
+                    return "Well guess that didn't work out then. I'd give you a spankin, but knowing you, you'd like that wouldn't you?";
                 case RequestContext.AskIfRequestIsCompleted:
-                    return "No way you did what I asked?";
+                    return "Oh did you finish the request?";
                 case RequestContext.RemindObjective:
-                    return "Forgot? well I need you to [objective].";
+                    return "Oh you just need too [objective].";
             }
             return base.RequestMessages(companion, context);
         }
@@ -156,11 +149,11 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case MoveInContext.Success:
-                    return "I can move in.";
+                    return "Oh how nice. I'll move in sure.";
                 case MoveInContext.Fail:
-                    return "I'm fine right now thanks.";
+                    return "I'd rather not right now.";
                 case MoveInContext.NotFriendsEnough:
-                    return "Maybe if we know each other more I'll move in.";
+                    return "I don't know...";
             }
             return base.AskCompanionToMoveInMessage(companion, context);
         }
@@ -170,11 +163,11 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case MoveOutContext.Success:
-                    return "Well alright see you some other time.";
+                    return "Oh well hopefully I can move back into the king's castle.";
                 case MoveOutContext.Fail:
-                    return "I think I'll stay longer.";
+                    return "Sorry, but I can't leave just yet ya know.";
                 case MoveOutContext.NoAuthorityTo:
-                    return "Uh I don't know you.";
+                    return "Sorry, but I can't leave just yet ya know.";
             }
             return base.AskCompanionToMoveOutMessage(companion, context);
         }
@@ -184,11 +177,11 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case JoinMessageContext.Success:
-                    return "Ya, I'm ready for a good fight.";
+                    return "As long as you protect me I'll join.";
                 case JoinMessageContext.FullParty:
-                    return "Clean up your crew a bit so I can fit.";
+                    return "Do you really need more than 5 followers at once?";
                 case JoinMessageContext.Fail:
-                    return "Not right now, sorry.";
+                    return "Sorry, can't right now.";
             }
             return base.JoinGroupMessages(companion, context);
         }
@@ -198,23 +191,23 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case LeaveMessageContext.Success:
-                    return "Guess I'll head back home then.";
+                    return "Oh finally, I thought I was gonna die with you.";
                 case LeaveMessageContext.Fail:
-                    return "Uh not right now sorry.";
+                    return "Can't leave right now sorry.";
                 case LeaveMessageContext.AskIfSure:
-                    return "Can't you wait tell we're back at town first?";
+                    return "No wait, if you leave me here I'm probably gonna die.";
                 case LeaveMessageContext.DangerousPlaceYesAnswer:
-                    return "Well this kinda sucks, but I'll try and make it home.";
+                    return "If I die you're paying for the funeral";
                 case LeaveMessageContext.DangerousPlaceNoAnswer:
-                    return "Good choice.";
+                    return "Thank you for seeing reason.";
             }
             return base.LeaveGroupMessages(companion, context);
         }
 
         public override string OnToggleShareBedsMessage(Companion companion, bool Share)
         {
-            if (Share) return "Odd, but alright.";
-            return "Hopefully there's a bed for me.";
+            if (Share) return "Alright, but don't get any idea's.";
+            return "That's probably for the best.";
         }
 
         public override string TacticChangeMessage(Companion companion, TacticsChangeContext context) //For when talking about changing their combat behavior.
@@ -222,15 +215,15 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case TacticsChangeContext.OnAskToChangeTactic:
-                    return "Different Tactic you say? Alright what should I do?";
+                    return "Hmm alright sure how should I fight?";
                 case TacticsChangeContext.ChangeToCloseRange:
-                    return "Alright! That's what I live for!";
+                    return "Uh ya sure? just be sure I have good armor then.";
                 case TacticsChangeContext.ChangeToMidRanged:
-                    return "Alright I'll be in the middle";
+                    return "Alright I'll fight in the middle then.";
                 case TacticsChangeContext.ChangeToLongRanged:
-                    return "Uh ok I'll be back here then.";
+                    return "Oh that's better, I'll be back here.";
                 case TacticsChangeContext.Nevermind:
-                    return "No change then?";
+                    return "Uh alright I'll stay as I was.";
             }
             return base.TacticChangeMessage(companion, context);
         }
@@ -240,7 +233,7 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case TalkAboutOtherTopicsContext.FirstTimeInThisDialogue:
-                    return "Anything else or are you good?";
+                    return "So uh anything else?";
                 case TalkAboutOtherTopicsContext.AfterFirstTime:
                     return "Anything else?";
                 case TalkAboutOtherTopicsContext.Nevermind:
@@ -256,25 +249,25 @@ namespace newfollowers.Companions.Logan
                 case SleepingMessageContext.WhenSleeping:
                     {
                         List<string> Mes = new List<string>();
-                        Mes.Add("Sleep messages are overrated");
-						Mes.Add("Ayo");
+                        Mes.Add("Mmm... Nago...");
+						Mes.Add("(She peaks at you)");
                         return Mes[Main.rand.Next(Mes.Count)];
                     }
                 case SleepingMessageContext.OnWokeUp:
                     switch (Main.rand.Next(2))
                     {
                         default:
-                            return "What's up?";
+                            return "Hehe I knew you were there. So what's up?";
                         case 1:
-                            return "Need my help with anything?";
+                            return "Oh hello, waking me up from my daily catnap now are ya.";
                     }
                 case SleepingMessageContext.OnWokeUpWithRequestActive:
                     switch (Main.rand.Next(2))
                     {
                         default:
-                            return "I'm guessing you got me up because you finished my request.";
+                            return "Ah hello, I'm guessing you did my request?";
                         case 1:
-                            return "Oh you got the thing I asked done?";
+                            return "Ooh I sensed you coming, You did my request right?";
                     }
             }
             return base.SleepingMessage(companion, context);
@@ -285,13 +278,13 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case InteractionMessageContext.OnAskForFavor:
-                    return "What do you need?";
+                    return "Uh sure, what do you need from me?";
                 case InteractionMessageContext.Accepts:
-                    return "Sure";
+                    return "Yeah I can do that.";
                 case InteractionMessageContext.Rejects:
-                    return "Nope";
+                    return "Uh sorry can't do that...";
                 case InteractionMessageContext.Nevermind:
-                    return "So nothing then?";
+                    return "It's fine.";
             }
             return base.InteractionMessages(companion, context);
         }
@@ -301,9 +294,9 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case BuddiesModeContext.Failed:
-                    return "Pretty sure we can't do that.";
+                    return "Sadly that's out of the question for now.";
                 case BuddiesModeContext.AlreadyHasBuddy:
-                    return "You already have a buddie.";
+                    return "You already have a buddy.";
             }
             return base.BuddiesModeMessage(companion, context);
         }
@@ -313,15 +306,15 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case InviteContext.Success:
-                    return "On my way!";
+                    return "Oh yeah I'll be over soon.";
                 case InviteContext.SuccessNotInTime:
-                    return "It'll need to wait tell tomorrow.";
+                    return "Sorry a bit busy cleaning the liter box hehe, I'll be over tomorrow though.";
                 case InviteContext.Failed:
-                    return "Can't come over right now, sorry.";
+                    return "Can't come over at the moment sorry.";
                 case InviteContext.CancelInvite:
-                    return "Oh you good then?";
+                    return "Oh alright, I'll head back then.";
                 case InviteContext.ArrivalMessage:
-                    return "I'm here [nickname]";
+                    return "I'm here.";
             }
             return "";
         }
@@ -331,30 +324,28 @@ namespace newfollowers.Companions.Logan
             switch(context)
             {
                 case ReviveContext.HelpCallReceived:
-                    return "How long are you gonna lay there?";
+                    return "I'm on my way";
                 case ReviveContext.RevivingMessage:
                     {
                         List<string> Mes = new List<string>();
                         if (!(target is Companion))
                         {
-                            Mes.Add("I gotcha!");
-                            Mes.Add("Let me help you [nickname]");
+                            Mes.Add("Oh please don't die...");
                         }
                         else
                         {
-                            Mes.Add("Doctor time!");
-                            Mes.Add("I'll patch those wounds.");
+                            Mes.Add("You alright?");
                         }
                         return Mes[Main.rand.Next(Mes.Count)];
                     }
                 case ReviveContext.OnComingForFallenAllyNearbyMessage:
-                    return "Coming as fast as I can!";
+                    return "I'm coming!";
                 case ReviveContext.ReachedFallenAllyMessage:
-                    return "Alright I gotcha.";
+                    return "Alright let's handle this.";
                 case ReviveContext.RevivedByItself:
-                    return "Some help would have been nice";
+                    return "Wow I healed myself how cool.";
                 case ReviveContext.ReviveWithOthersHelp:
-                    return "Thanks for the helping hand!";
+                    return "Thanks Everyone :3";
             }
             return base.ReviveMessages(companion, target, context);
         }
@@ -364,9 +355,9 @@ namespace newfollowers.Companions.Logan
             switch(Context)
             {
                 case MessageIDs.LeopoldEscapedMessage:
-                    return "I guess you must be way scarier than I think.";
+                    return "Hehe he ran.";
                 case MessageIDs.VladimirRecruitPlayerGetsHugged:
-                    return "...";
+                    return "Aww...";
             }
             return base.GetOtherMessage(companion, Context);
         }

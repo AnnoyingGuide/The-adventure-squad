@@ -11,7 +11,9 @@ namespace newfollowers
 			return new[] {
 				new Item(ModContent.ItemType<grabbag1>(), 1),
 				new Item(ModContent.ItemType<grabbag2>(), 1),
-				new Item(ModContent.ItemType<grabbag3>(), 1)
+				new Item(ModContent.ItemType<grabbag3>(), 1),
+				new Item(ModContent.ItemType<grabbag4>(), 1),
+				new Item(ModContent.ItemType<grabbag5>(), 1),
 			};
 		}
 	}

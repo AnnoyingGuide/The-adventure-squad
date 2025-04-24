@@ -13,4 +13,14 @@ Items: {
 		DisplayName: Friend Bag (Hero)
 		Tooltip: Can you open the bag please?
 	}
+
+	grabbag4: {
+		DisplayName: Friend Bag (Shiro)
+		Tooltip: Uh mrow?
+	}
+
+	grabbag5: {
+		DisplayName: Friend Bag (Nago)
+		Tooltip: Can you let meowt?
+	}
 }
