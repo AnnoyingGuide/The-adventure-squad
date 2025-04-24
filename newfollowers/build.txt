@@ -1,4 +1,0 @@
-displayName = The Adventure Squad!
-author = Shiro
-version = 1.2.0.2
-modReferences = terraguardians
